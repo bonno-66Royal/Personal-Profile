@@ -1,40 +1,90 @@
-body {
+/* Body Styling */
+body { 
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
- 
+
+/* Navigation Bar */
+nav {
+    background-color: black;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* Hero Section */
 .hero {
     padding: 60px 20px;
-    background-color: #f8f9fa;
+    background-color: DodgerBlue;
+    color: white;
+    text-align: center;
 }
- 
+
 .profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
- 
+
 /* Section Styling */
 .section {
     padding: 50px 20px;
 }
- 
+
+/* About Section */
+#about {
+    background-color: Tomato;
+}
+
+/* Skills Section */
+#skills {
+    background-color: LightGray;
+}
+
+/* Education Section */
+#education {
+    background-color: Khaki;
+}
+
+/* Contact Section */
+#contact {
+    background-color: MediumSeaGreen;
+}
+
+/* Headings */
 h2 {
     color: #007bff;
     margin-bottom: 20px;
 }
- 
+
 /* Skills List */
 ul {
     list-style-type: none;
     padding: 0;
 }
- 
+
 ul li {
     background: #f8f9fa;
     padding: 10px;
     margin: 5px 0;
     border-left: 5px solid #007bff;
 }
+
  
