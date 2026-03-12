@@ -1,5 +1,4 @@
-
-  /* style.css – completely independent from Bootstrap, only linked in index.html */
+/* style.css – completely independent from Bootstrap, only linked in index.html */
 /* all custom styling, no Bootstrap overriding in this file */
 
 * {
@@ -8,11 +7,17 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 80px; /* Accounts for fixed navbar */
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   background-color: #fcf9f7;
   color: #1e1b1a;
   line-height: 1.6;
+  padding-top: 76px; /* Matches navbar height */
 }
 
 /* ----- navigation (dark but custom) ----- */
@@ -52,6 +57,9 @@ body {
   background: linear-gradient(145deg, #f0e7de 0%, #fcf9f7 100%);
   padding: 5rem 0 4rem 0;
   text-align: center;
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
 }
 
 .hero-container {
@@ -59,8 +67,8 @@ body {
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid white;
@@ -69,7 +77,7 @@ body {
 }
 
 .hero-section h1 {
-  font-size: 3.3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #1f2a36;
   letter-spacing: -0.5px;
@@ -109,7 +117,8 @@ body {
 
 /* ----- section spacing & headings (margins/paddings) ----- */
 .section-spacing {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
+  scroll-margin-top: 80px;
 }
 
 .bg-soft {
@@ -122,7 +131,7 @@ h2 {
   font-size: 2.2rem;
   border-left: 7px solid #b16d4b;
   padding-left: 1.3rem;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2.5rem;
   letter-spacing: -0.3px;
 }
 
@@ -132,6 +141,37 @@ h2 {
   color: #2b2b2b;
   max-width: 850px;
   margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.personal-detail-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.personal-detail-card:hover {
+  transform: translateY(-5px);
+}
+
+.detail-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.personal-detail-card h4 {
+  color: #1f2a36;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.personal-detail-card p {
+  color: #6b5b50;
+  margin: 0;
 }
 
 .fun-fact {
@@ -179,6 +219,46 @@ ul.skill-list li:hover {
   background-color: #ffffff;
 }
 
+/* Skill proficiency bars */
+.skill-proficiency {
+  background: white;
+  padding: 2rem;
+  border-radius: 30px;
+  margin-top: 2rem;
+}
+
+.skill-bar-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-bar-item span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #1f2a36;
+}
+
+.progress-bar-container {
+  background-color: #f0e7de;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background-color: #b16d4b;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 15px;
+  transition: width 1s ease;
+}
+
 /* certifications */
 .certif-wrapper h3 {
   font-size: 1.6rem;
@@ -198,10 +278,15 @@ ul.skill-list li:hover {
 /* education */
 .edu-item {
   background: #ffffffdb;
-  padding: 1.2rem 2rem;
+  padding: 1.5rem 2rem;
   border-radius: 30px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.03);
   border: 1px solid #f0ded2;
+  transition: transform 0.3s;
+}
+
+.edu-item:hover {
+  transform: translateX(10px);
 }
 
 .edu-item strong {
@@ -212,6 +297,59 @@ ul.skill-list li:hover {
 .edu-note {
   color: #5d4b3e;
   font-style: italic;
+}
+
+.edu-details .badge {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f5efe9 !important;
+  color: #1f2a36 !important;
+  font-weight: 500;
+}
+
+/* Timeline */
+.education-timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #b16d4b;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -38px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #b16d4b;
+  border: 3px solid #f5efe9;
+}
+
+.timeline-content {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.timeline-content h5 {
+  color: #1f2a36;
+  margin-bottom: 0.3rem;
 }
 
 .badge-custom {
@@ -237,6 +375,25 @@ ul.skill-list li:hover {
   margin-bottom: 2rem;
 }
 
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-form .form-control {
+  border: 2px solid #f0e7de;
+  border-radius: 15px;
+  padding: 0.8rem 1.2rem;
+  transition: border-color 0.3s;
+}
+
+.contact-form .form-control:focus {
+  border-color: #b16d4b;
+  box-shadow: none;
+}
+
 .contact-btn {
   background-color: #9b6b4f;
   color: white;
@@ -255,11 +412,42 @@ ul.skill-list li:hover {
 
 .personal-contact-links {
   background: #f1eae4;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
   border-radius: 40px;
   font-size: 1.2rem;
   line-height: 2.2;
   border: 1px solid #e3cfc0;
+  height: 100%;
+}
+
+.availability-badge {
+  background: #e8f5e9;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
 }
 
 /* modal styling (just to show custom touches) */
@@ -309,13 +497,32 @@ ul.skill-list li:hover {
 
 /* responsive touch */
 @media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+  
+  .hero-section {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+  
   .hero-section h1 {
     font-size: 2.5rem;
   }
+  
   h2 {
     font-size: 2rem;
   }
+  
   .fun-fact {
     font-size: 1rem;
+  }
+  
+  .personal-detail-card {
+    margin-bottom: 1rem;
+  }
+  
+  .education-timeline {
+    padding-left: 20px;
   }
 }
