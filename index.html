@@ -1,150 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Profile</title>
-
-    <!-- Bootstrap CDN -->
+    <title>Bonno Moloi - Personal Profile</title>
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Internal CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .hero {
-            padding: 60px 20px;
-            background-color: #f8f9fa;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .section {
-            padding: 50px 20px;
-            display: none; /* Hide all sections by default */
-        }
-
-        .section.active {
-            display: block; /* Show only active section */
-        }
-    </style>
+    
+    <!-- Font Awesome for icons (optional but nice) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">My Profile</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-code"></i> Bonno Moloi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Hero Section (Always Visible) -->
-<section class="hero text-center">
-    <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-    <h1>Bonno Moloi</h1>
-    <p>A passionate Web Development student learning HTML, CSS and Java.</p>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center">
+                    <img src="https://via.placeholder.com/200" alt="Profile Picture" class="profile-img">
+                </div>
+                <div class="col-lg-8">
+                    <h1 class="display-4">Hi, I'm <span class="highlight">Bonno Moloi</span></h1>
+                    <p class="lead">Web Development Student | Problem Solver | Tech Enthusiast</p>
+                    <p class="hero-bio">Passionate about creating beautiful, responsive websites and solving real-world problems through code.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Hire Me</a>
+                        <a href="#projects" class="btn btn-outline-primary">View Projects</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- About Section -->
-<section id="about" class="section">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>
-            I am a motivated student who enjoys coding and building websites.
-            I am currently improving my skills in web development and programming.
-        </p>
-    </div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="about-card">
+                        <p class="about-text">
+                            I am a motivated Computer Systems Engineering student with a passion for web development and programming. 
+                            I enjoy building websites that are not only functional but also visually appealing and user-friendly.
+                        </p>
+                        <p class="about-text">
+                            Currently, I'm focused on expanding my skills in HTML5, CSS3, JavaScript, and Bootstrap. 
+                            I believe in continuous learning and staying updated with the latest technologies in the ever-evolving world of web development.
+                        </p>
+                        <div class="personal-info">
+                            <h4><i class="fas fa-user"></i> Personal Details</h4>
+                            <ul class="info-list">
+                                <li><strong>Name:</strong> Bonno Moloi</li>
+                                <li><strong>Age:</strong> 22</li>
+                                <li><strong>Location:</strong> Gaborone, Botswana</li>
+                                <li><strong>Email:</strong> bonnomoloi66@gmail.com</li>
+                                <li><strong>Phone:</strong> +267 77864737</li>
+                                <li><strong>Freelance:</strong> Available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Skills Section -->
-<section id="skills" class="section">
-    <div class="container">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Java Programming</li>
-            <li>Problem Solving</li>
-        </ul>
-    </div>
-</section>
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code"></i> Technical Skills</h4>
+                        <div class="skill-item">
+                            <span>HTML5</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%">90%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>CSS3</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%">85%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%">70%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Java</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%">75%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Bootstrap</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%">80%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-users"></i> Soft Skills</h4>
+                        <div class="soft-skills">
+                            <span class="badge">Problem Solving</span>
+                            <span class="badge">Team Collaboration</span>
+                            <span class="badge">Communication</span>
+                            <span class="badge">Time Management</span>
+                            <span class="badge">Adaptability</span>
+                            <span class="badge">Creativity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Education Section -->
-<section id="education" class="section">
-    <div class="container">
-        <h2>Education</h2>
-        <p>
-            Degree in Computer Systems Engineering <br>
-            Currently studying Web Development and Software Programming.
-        </p>
-    </div>
-</section>
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education & Experience</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Computer Systems Engineering</h4>
+                            <p class="date">2022 - Present</p>
+                            <p>Studying web development, programming, and computer systems at university level.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Web Development Certificate</h4>
+                            <p class="date">2024</p>
+                            <p>Completed intensive web development course focusing on HTML, CSS, JavaScript and Bootstrap.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section">
-    <div class="container">
-        <h2>Contact</h2>
-        <p>Email: bonnomoloi66@gmail.com</p>
-        <p>Phone: +267 77864737</p>
-    </div>
-</section>
+    <!-- Projects Section (New) -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>Portfolio Website</h4>
+                        <p>A personal portfolio website built with HTML, CSS and Bootstrap to showcase my work.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4>JavaScript Calculator</h4>
+                        <p>A functional calculator built with JavaScript for basic arithmetic operations.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h4>Job Application Form</h4>
+                        <p>An interactive job application form with validation using JavaScript.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- JavaScript to Switch Sections -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>bonnomoloi66@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+267 77864737</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Gaborone, Botswana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    const links = document.querySelectorAll(".nav-link");
-    const sections = document.querySelectorAll(".section");
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bonno Moloi. All rights reserved.</p>
+        </div>
+    </footer>
 
-    links.forEach(link => {
-        link.addEventListener("click", function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href").substring(1);
-
-            sections.forEach(section => {
-                section.classList.remove("active");
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('.nav-link');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             });
-
-            document.getElementById(targetId).classList.add("active");
         });
-    });
-
-});
-</script>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    </script>
 </body>
-                </html>
+</html>
