@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Morgan · creative profile</title>
+  <title>Bonno Moloi · creative profile</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- custom CSS (completely separate from Bootstrap) -->
@@ -12,14 +12,15 @@
 <body>
 
   <!-- navigation bar (Bootstrap structure, but styled via style.css) -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">✦ ALEX</a>
+      <a class="navbar-brand" href="#home">✦ BONNO</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
@@ -29,13 +30,13 @@
     </div>
   </nav>
 
-  <!-- hero section with profile image, name, bio -->
-  <section class="hero-section">
+  <!-- hero section with profile image, name, bio (now with home id) -->
+  <section id="home" class="hero-section">
     <div class="container hero-container">
       <!-- profile image from images folder (add your own photo) -->
-      <img src="images/profile.jpg" alt="Alex Morgan profile" class="profile-pic">
-      <h1>Alex Morgan</h1>
-      <p class="hero-bio">building digital experiences & creative solutions · based in nyc</p>
+      <img src="images/profile.jpg" alt="Bonno Moloi profile" class="profile-pic">
+      <h1>Bonno Moloi</h1>
+      <p class="hero-bio">building digital experiences & creative solutions · based in botswana</p>
       <!-- extra personal touch: a small badge / Bootstrap button (custom styled) -->
       <a href="#contact" class="btn hero-btn">✺ let's connect</a>
     </div>
@@ -45,10 +46,35 @@
   <section id="about" class="section-spacing">
     <div class="container">
       <h2>📌 about me</h2>
-      <p class="about-text">I’m a developer & designer with a passion for clean code and human‑centered design. I started coding at 14 and never stopped. Currently I’m exploring the intersection of AI and interactive media. Outside work I love hiking, modular synthesis, and brewing espresso.</p>
+      <p class="about-text">I'm a developer & designer with a passion for clean code and human‑centered design. I started coding at 16 and never stopped. Currently I'm exploring the intersection of AI and interactive media. Outside work I love hiking, photography, and brewing the perfect cup of coffee.</p>
       <!-- extra personal detail: fun fact -->
       <div class="fun-fact">
-        <span class="fact-badge">fun fact:</span> I once built a theremin from scratch — it sounded awful but looked cool.
+        <span class="fact-badge">fun fact:</span> I once built a computer from scratch — it actually worked!
+      </div>
+      
+      <!-- Additional personal details -->
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="personal-detail-card">
+            <span class="detail-icon">🌍</span>
+            <h4>Location</h4>
+            <p>Gaborone, Botswana</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="personal-detail-card">
+            <span class="detail-icon">💼</span>
+            <h4>Experience</h4>
+            <p>3+ years in web development</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="personal-detail-card">
+            <span class="detail-icon">🎯</span>
+            <h4>Goal</h4>
+            <p>Full-stack developer & UX designer</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -63,7 +89,8 @@
             <li>HTML5 & semantic markup</li>
             <li>CSS3 / SCSS / Tailwind</li>
             <li>JavaScript (ES6+) / React</li>
-            <li>Python & Flask</li>
+            <li>Python & Django</li>
+            <li>TypeScript</li>
           </ul>
         </div>
         <div class="col-md-6">
@@ -72,13 +99,38 @@
             <li>Node.js / Express</li>
             <li>Git & GitHub workflows</li>
             <li>Bootstrap 5 · responsive first</li>
+            <li>MongoDB / PostgreSQL</li>
           </ul>
         </div>
       </div>
+      
+      <!-- Skill proficiency bars -->
+      <div class="skill-proficiency mt-4">
+        <h4 class="mb-3">Proficiency levels</h4>
+        <div class="skill-bar-item">
+          <span>Frontend Development</span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 90%">90%</div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <span>Backend Development</span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 75%">75%</div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <span>UI/UX Design</span>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 85%">85%</div>
+          </div>
+        </div>
+      </div>
+      
       <!-- extra: certifications (expanded section) -->
       <div class="certif-wrapper">
         <h3 class="mt-4">📜 certifications</h3>
-        <p>▪ freeCodeCamp responsive web design (2024) <br>▪ Google UX design certificate (2023)</p>
+        <p>▪ freeCodeCamp responsive web design (2024) <br>▪ Google UX design certificate (2023) <br>▪ Meta Front-End Developer (2025)</p>
       </div>
     </div>
   </section>
@@ -88,16 +140,55 @@
     <div class="container">
       <h2>🎓 education</h2>
       <div class="edu-item">
-        <strong>BFA in Interactive Media</strong> — Tisch School of the Arts, NYU (2021–2025)<br>
-        <span class="edu-note">focus on web frameworks & physical computing · GPA 3.8</span>
+        <strong>BSc in Computer Science</strong> — University of Botswana (2022–2026)<br>
+        <span class="edu-note">focus on web technologies & software engineering · GPA 3.7</span>
+        <div class="edu-details mt-2">
+          <span class="badge bg-light text-dark">Data Structures</span>
+          <span class="badge bg-light text-dark">Algorithms</span>
+          <span class="badge bg-light text-dark">Web Development</span>
+          <span class="badge bg-light text-dark">Database Systems</span>
+        </div>
       </div>
       <div class="edu-item mt-3">
-        <strong>Full‑stack bootcamp</strong> — Codeworks (2024)<br>
+        <strong>Full‑stack web development</strong> — Code Institute (2024)<br>
         <span class="edu-note">intensive 12‑week program, MERN stack</span>
+        <div class="edu-details mt-2">
+          <span class="badge bg-light text-dark">MongoDB</span>
+          <span class="badge bg-light text-dark">Express.js</span>
+          <span class="badge bg-light text-dark">React</span>
+          <span class="badge bg-light text-dark">Node.js</span>
+        </div>
       </div>
+      
       <!-- extra: online courses (more personal) -->
       <div class="extra-courses mt-4">
-        <span class="badge-custom">always learning:</span> advanced CSS (CSS Art), WebGL basics, creative coding with p5.js
+        <span class="badge-custom">always learning:</span> advanced CSS, WebGL basics, creative coding, mobile development
+      </div>
+      
+      <!-- Timeline of education -->
+      <div class="education-timeline mt-5">
+        <h4 class="mb-4">Learning journey</h4>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5>2026 - Expected Graduation</h5>
+            <p>Bachelor's Degree in Computer Science</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5>2024 - Full-stack Bootcamp</h5>
+            <p>Code Institute - MERN Stack Certification</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5>2023 - UX Design Certificate</h5>
+            <p>Google - User Experience Design</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -106,16 +197,48 @@
   <section id="contact" class="section-spacing bg-soft">
     <div class="container">
       <h2>📫 contact</h2>
-      <p class="contact-intro">I’m open for collaborations, freelance projects, or just a coffee chat.</p>
+      <p class="contact-intro">I'm open for collaborations, freelance projects, or just a coffee chat.</p>
+      
+      <!-- Contact form (Bootstrap component) -->
+      <div class="row">
+        <div class="col-lg-6">
+          <form class="contact-form">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn contact-btn w-100">Send Message</button>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <!-- extra personal contact details -->
+          <div class="personal-contact-links">
+            <h5 class="mb-3">📱 Get in touch</h5>
+            <span>📧 bonno.m@personal.profile</span><br>
+            <span>📞 +267 71 234 567</span><br>
+            <span>🐦 @bonno_codes</span><br>
+            <span>💼 linkedin.com/in/bonnmoloi</span><br>
+            <span>💻 github.com/bonnmoloi</span>
+            
+            <!-- Availability badge -->
+            <div class="availability-badge mt-4">
+              <span class="status-dot"></span>
+              <span>Available for freelance work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <!-- Bootstrap component: button with modal (modal code below) -->
-      <button type="button" class="btn contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
-        ✉️ quick message
-      </button>
-      <!-- extra personal contact details -->
-      <div class="personal-contact-links mt-4">
-        <span>📧 alex.m@personal.profile</span><br>
-        <span>🐦 @alex_codes</span><br>
-        <span>💼 linkedin.com/in/alexm</span>
+      <div class="text-center mt-4">
+        <button type="button" class="btn contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+          ✉️ quick message
+        </button>
       </div>
     </div>
   </section>
@@ -129,7 +252,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>Thanks for stopping by! You can reach me directly at <strong>alex.m@personal.profile</strong> — I usually reply within 24h.</p>
+          <p>Thanks for stopping by, I'm Bonno! You can reach me directly at <strong>bonno.m@personal.profile</strong> — I usually reply within 24h.</p>
           <p class="modal-small">(this is a demo Bootstrap modal, custom styled with style.css)</p>
         </div>
         <div class="modal-footer">
@@ -142,11 +265,32 @@
   <!-- footer (optional, but adds polish) -->
   <footer class="footer-custom">
     <div class="container text-center">
-      <p>© 2025 Alex Morgan — built with HTML5, CSS3, Bootstrap 5 · hosted on GitHub Pages</p>
+      <p>© 2025 Bonno Moloi — built with HTML5, CSS3, Bootstrap 5 · hosted on GitHub Pages</p>
     </div>
   </footer>
 
   <!-- Bootstrap JS for modal & toggler (required) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Smooth scroll script for better navigation -->
+  <script>
+    document.querySelectorAll('.navbar-nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          const navHeight = document.querySelector('.navbar').offsetHeight;
+          const targetPosition = targetElement.offsetTop - navHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
